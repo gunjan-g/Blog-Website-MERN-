@@ -1,0 +1,21 @@
+<%- include("partials/header"); -%>
+
+    <h1>Home</h1>
+    <p> <%= startingContent %> </p>
+  
+  <!-- iterating over posts and for each post, which is an object-->
+  <%  posts.forEach(function(post){ %>
+    
+    <!-- Display post title -->
+    <h1>-&nbsp;<%=post.title%></h1>
+    <p>
+      <!-- Only display 0 to 100 word in string -->
+      <%=post.content.substring(0, 100) + " ..."%>
+
+      <!-- Move to new href with post id as new address -->
+      <a href="/posts/<%=post._id%>">Read More</a>
+    </p>
+
+    <% }) %>
+
+<%- include("partials/footer"); -%>
