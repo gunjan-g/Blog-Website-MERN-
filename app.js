@@ -3,9 +3,8 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
 
-const homeStartingContent = "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.";
-const aboutContent = "Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed. Platea dictumst quisque sagittis purus sit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Mauris in aliquam sem fringilla. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Amet massa vitae tortor condimentum lacinia quis vel eros. Enim ut tellus elementum sagittis vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui.";
-const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
+const homeStartingContent = "Save the moments that matter! Pen down your ideas! We store your thoughts for free!";
+const aboutContent = "Whether you’re looking for a tool to record your daily emotions and activities in a reflective journal, keep track of milestones in a food diary or pregnancy journal, or even record your dreams in a dream journal, we have got you covered. We give you the tools you need to focus on the ideas you want to preserve, rather than the process of writing itself.";
 
 const app = express();
 
@@ -28,7 +27,10 @@ const Post = mongoose.model("Post", postSchema);
 
 //rendering home page
 app.get("/", function(req, res){
-  
+  res.render("index");
+});
+
+app.get("/home", function(req, res){
   //find all posts and posts are given at result
   Post.find({}, function(err, posts){
     //render home.ejs view with starting content as constant defined above and posts from database
@@ -56,7 +58,7 @@ app.post("/compose", function(req, res){
   //if there is no error in saving posts, then redirect to home
   post.save(function(err){
     if (!err){
-        res.redirect("/");
+        res.redirect("/home");
     }
   });
 });
@@ -79,11 +81,6 @@ const requestedPostId = req.params.postId;
 app.get("/about", function(req, res){
   //render about.ejs view with about content as constant
   res.render("about", {aboutContent: aboutContent});
-});
-
-app.get("/contact", function(req, res){
-  //render contact.ejs view with about content as constant
-  res.render("contact", {contactContent: contactContent});
 });
 
 app.listen(8000, function() {
