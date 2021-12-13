@@ -2,10 +2,13 @@
 This allows you to compose daily blogs and add them to the home page!
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/81305824/145457748-58e810ae-2860-402d-b85c-0f0d7dfbcbca.png)
+![image](https://user-images.githubusercontent.com/81305824/145876463-9e560b93-8fdf-4bb7-a78c-6214b33bae9c.png)
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/81305824/145457854-ac83764a-f8e8-4793-8a38-14dc39c9c8e5.png)
+![image](https://user-images.githubusercontent.com/81305824/145876632-3407bb79-a7dc-406a-9b3e-ca648dec4ff7.png)
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/81305824/145457920-f885d7d0-ad2c-4ace-912c-042d9b7d8225.png)
+![image](https://user-images.githubusercontent.com/81305824/145876729-3f21b062-ca43-4a49-9573-70ff488d4558.png)
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/81305824/145876794-c1bfc359-db4d-4a93-b050-778e483ee369.png)
