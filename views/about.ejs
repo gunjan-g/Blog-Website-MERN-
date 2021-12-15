@@ -1,19 +1,36 @@
 <%- include("partials/header"); -%>
 
 <div class="container">
-    
-    <h1 style="text-align: center;">ABOUT US</h1>
-    <div style="margin: 3rem;">
-    <p style="font-size: 3rem;"> <%= aboutContent %> </p>
+  <h1 style="text-align: center;">ABOUT US</h1>
+  <div style="margin: 3rem;">
+  <p style="font-size: 2rem;"> <%= aboutContent %> </p>
+  </div>
+
+  <br>
+
+    <div class="memories" style="margin-bottom: 6rem;">
+      <div class="row" style="padding: 3rem 0rem;">
+        <div class="col-lg-6">
+          <img src="https://user-images.githubusercontent.com/81305824/146252442-edd93eda-15b5-4db9-8495-b9499b767005.png" height="300rem" width="300rem">
+        </div>
+        <div class="col-lg-6" style="padding-top: 3rem;">
+          <h3 style="font-size: 5rem;">Hang on to Memories!</h3> <br>
+          <p style="font-size: 2.5rem;">Save moments that matter!<br> We let you write thousands of your stories everyday</p>
+        </div>
+      </div>
     </div>
 
-</div>
-<div class="footer page">
-  <i class="fab fa-twitter icon"></i>
-  <i class="fab fa-facebook-f icon"></i>
-  <i class="fab fa-instagram icon"></i>
-  <i class="fas fa-envelope icon"></i>
-  <p>Made with ❤️ by Gunjan</p>
-</div>
-</body>
-</html>
+    <div class="join" style="margin-bottom: 6rem;">
+      <div class="row" style="padding: 3rem 0rem;">
+        <div class="col-lg-6" style="padding-top: 3rem;">
+          <h3 style="font-size: 5rem;">Join Millions of Others!</h3> <br>
+          <p style="font-size: 2.3rem;">Whether sharing your expertise, breaking news, or whatever’s on your mind, you’re in good company.<br> Discover why millions of people have published their passions here.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://user-images.githubusercontent.com/81305824/146254478-27b5bbe3-fdbd-4c0d-8a6a-3ca070e441e6.png" height="270rem" width="300rem">
+        </div>
+      </div>
+    </div>
+
+
+    <%- include("partials/footer"); -%>
