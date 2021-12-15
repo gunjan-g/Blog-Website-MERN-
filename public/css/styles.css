@@ -68,6 +68,22 @@ p{
   color: white;
 }
 
+.memories{
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  background-color: #e7b50e;
+  color: white;
+}
+
+.join{
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  background-color: #EA2C62;
+  color: white;
+}
+
 .image{
   margin-top: 3rem;
   margin-bottom: 0rem;
