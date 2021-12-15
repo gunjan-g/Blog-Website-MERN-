@@ -1,5 +1,5 @@
 # Blog-Website (MERN Website)
-This allows you to compose daily blogs and add them to the home page!
+This allows you to compose daily blogs and add them to My Blogs page!
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/81305824/145876463-9e560b93-8fdf-4bb7-a78c-6214b33bae9c.png)
@@ -12,3 +12,6 @@ This allows you to compose daily blogs and add them to the home page!
 <br>
 <br>
 ![image](https://user-images.githubusercontent.com/81305824/145876794-c1bfc359-db4d-4a93-b050-778e483ee369.png)
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/81305824/146262449-ab3f0fd0-8ee5-4d84-90d9-64383477a2e0.png)
