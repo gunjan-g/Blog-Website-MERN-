@@ -1,29 +1,35 @@
-<%- include("partials/header"); -%>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<div class="container">
+<head>
+  <meta charset="utf-8">
+  <title>Daily Journal</title>
+  
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
-    <h1 style="text-align: center;">MY BLOGS</h1>
-    <h3 style="text-align:center; color: grey;"> <%= startingContent %> </h3>
-    <div style="text-align: center; margin-top: 3rem;">
-      <img src="https://user-images.githubusercontent.com/81305824/145872084-129355ec-700c-44bd-9fc8-db8d8afafc1c.png">
-    </div>
-    <br>
-    <br>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-  <!-- iterating over posts and for each post, which is an object-->
-  <%  posts.forEach(function(post){ %>
-    
-    <!-- Display post title -->
-    <h1 class="titlepost"><i class="fas fa-pen-square"></i>&nbsp;<%=post.title%></h1>
-    <p>
-      <!-- Only display 0 to 100 word in string -->
-      <%=post.content.substring(0, 100) + " ..."%>
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="/css/styles.css">
 
-      <!-- Move to new href with post id as new address -->
-      <a href="/posts/<%=post._id%>">Read More</a>
-    </p>
+  <link rel="icon" href="/images/book.jpg">
+  </head>
 
-    <% }) %>
-
-    <%- include("partials/footer"); -%>
-
+  <body>
+        <div class="intro">
+            <div style="padding: 4rem 0rem 2.6rem 0rem;">
+            <i class="fas fa-book fa-6x"></i>
+            <h1 style="color: white;">Daily Journal</h1>
+            <p class="lead">Publish your writings, your way</p>
+            <hr>
+            <a class="btn btn-light btn-lg" href="/register" role="button">Register</a>
+            &nbsp;<a class="btn btn-dark btn-lg" href="/login" role="button">Login</a>
+            </div>
+        </div>
+      
+ <%- include('partials/footer') %>
