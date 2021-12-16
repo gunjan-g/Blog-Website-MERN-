@@ -22,19 +22,69 @@ const postSchema = {
   content: String
 };
 
+//creating schema for users namely email and password
+const userSchema= {
+  email: String,
+  password: String
+};
+
 //create collection Post using schema postSchema
 const Post = mongoose.model("Post", postSchema);
+//create collection User using schema userSchema
+const User = new mongoose.model('User',userSchema);
 
 //rendering home page
 app.get("/", function(req, res){
-  res.render("index");
+  res.render("home");
 });
 
-app.get("/home", function(req, res){
+app.get("/register",function(req,res){
+  res.render("register");
+});
+
+app.get("/login",function(req,res){
+  res.render("login");
+});
+
+app.post("/register",function(req,res){
+  const newUser= new User({
+    email: req.body.username,
+    password: req.body.password
+  })
+  newUser.save(function(err){
+    if(err){
+      console.log(err);
+    }else{
+      res.render("index");
+    }
+  });
+})
+
+app.post("/login",function(req,res){
+  const username= req.body.username;
+  const password= req.body.password;
+
+  User.findOne({email: username},function(err,foundUser){
+    if(err){
+      console.log(err);
+    }else{
+      if(foundUser){
+        if(foundUser.password===password){
+          res.render("index");
+        }
+      }
+      else{
+        res.send("OOPS! You're not registered. Register first!");
+      }
+    }
+  })
+});
+
+app.get("/myblogs", function(req, res){
   //find all posts and posts are given at result
   Post.find({}, function(err, posts){
-    //render home.ejs view with starting content as constant defined above and posts from database
-    res.render("home", {
+    //render myblogs.ejs view with starting content as constant defined above and posts from database
+    res.render("myblogs", {
       startingContent: homeStartingContent,
       posts: posts
       });
@@ -55,10 +105,10 @@ app.post("/compose", function(req, res){
     content: req.body.postBody
   });
 
-  //if there is no error in saving posts, then redirect to home
+  //if there is no error in saving posts, then redirect to myblogs
   post.save(function(err){
     if (!err){
-        res.redirect("/home");
+        res.redirect("/myblogs");
     }
   });
 });
@@ -76,6 +126,10 @@ const requestedPostId = req.params.postId;
     });
   });
 
+});
+
+app.get("/index",function(req,res){
+  res.render("index");
 });
 
 app.get("/about", function(req, res){
