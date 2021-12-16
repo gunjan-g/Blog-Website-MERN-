@@ -2,16 +2,19 @@
 This allows you to compose daily blogs and add them to My Blogs page!
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/81305824/145876463-9e560b93-8fdf-4bb7-a78c-6214b33bae9c.png)
+![image](https://user-images.githubusercontent.com/81305824/146341992-48d0ae3e-8b48-4b61-aea6-5469aa303a2c.png)
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/81305824/145876632-3407bb79-a7dc-406a-9b3e-ca648dec4ff7.png)
+![image](https://user-images.githubusercontent.com/81305824/146342194-4efa5388-9e85-4644-820e-113d8e5546c0.png)
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/81305824/145876729-3f21b062-ca43-4a49-9573-70ff488d4558.png)
+![image](https://user-images.githubusercontent.com/81305824/146342267-1b53547e-48a7-4011-b9ab-d7ad88d0f0c8.png)
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/81305824/145876794-c1bfc359-db4d-4a93-b050-778e483ee369.png)
+![image](https://user-images.githubusercontent.com/81305824/146342338-bfdedea5-f1d4-4e95-8a4d-b2f7c98f5b57.png)
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/81305824/146262449-ab3f0fd0-8ee5-4d84-90d9-64383477a2e0.png)
+![image](https://user-images.githubusercontent.com/81305824/146342412-497785fd-9ab4-4b05-b2e5-64ee73243827.png)
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/81305824/146342462-8e5a9efa-dcae-4a99-94fd-4c2293e75034.png)
