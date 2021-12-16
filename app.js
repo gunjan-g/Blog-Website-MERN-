@@ -72,6 +72,9 @@ app.post("/login",function(req,res){
         if(foundUser.password===password){
           res.render("index");
         }
+        else{
+          res.send("Wrong Password!");
+        }
       }
       else{
         res.send("OOPS! You're not registered. Register first!");
