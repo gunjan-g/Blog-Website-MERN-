@@ -1,5 +1,5 @@
 # Blog-Website (MERN Website)
-This allows you to compose daily blogs and add them to My Blogs page!
+This allows you to compose daily blogs and add them to My Blogs page and add tasks to To-do List!
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/81305824/146341992-48d0ae3e-8b48-4b61-aea6-5469aa303a2c.png)
